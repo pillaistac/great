@@ -1,0 +1,20 @@
+@@ -17,6 +17,7 @@ public void Execute(Dictionary<string, string> arguments)
+            string altservice = "";
+            LUID luid = new LUID();
+            bool ptt = false;
+            string srealm = "";
+
+            if (arguments.ContainsKey("/luid"))
+            {
+@@ -45,6 +46,11 @@ public void Execute(Dictionary<string, string> arguments)
+                Console.WriteLine("\r\n[X] An /altservice:SNAME or /altservice:SNAME/host needs to be supplied!\r\n");
+                return;
+            }
+
+            if(arguments.ContainsKey("/srealm"))
+            {
+                srealm = arguments["/srealm"];
+            }
+
+            if (arguments.ContainsKey("/ticket"))
+            {
